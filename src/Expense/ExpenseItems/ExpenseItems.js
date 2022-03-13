@@ -1,9 +1,9 @@
 import "./ExpenseItems.css";
-import Card from "./card";
+import Card from "../../UI/Card";
 import React from "react";
 // import { useState } from "react";
 
-import ExpenseDate from "./ExpenseDate";
+import ExpenseDate from "../ExpenseDate/ExpenseDate";
 function ExpenseItem(props) {
   // const [title, setTitle] = useState(props.title);
   // useState required a default state.
@@ -14,16 +14,13 @@ function ExpenseItem(props) {
   };
 
   return (
-    <li onClick={clickHandler}>
+    <li onClick={clickHandler} key={props.id}>
       <Card className="expense-item">
         <ExpenseDate date={props.date} />
         <div className="expense-item__description">
           <h2> {props.title} </h2>
           <div className="expense-item__price">${props.amount}</div>
         </div>
-        {/* <button type="button" >
-          Icon
-        </button> */}
       </Card>
     </li>
   );

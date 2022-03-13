@@ -1,36 +1,8 @@
-import "./NewExpenseform.css";
+import "./NewExpenseForm.css";
 import React from "react";
 import { useState } from "react";
 
 const NewExpenseForm = (props) => {
-  // const [UserInput,setUserInput] = useState({
-  // enteredTitle:" ",
-  // enteredAmount:" ",
-  // enteredDate:" ",
-  //   });
-
-  //   const clickTitleHandler = (event)=>
-  //   { setUserInput((prevstate)=>{
-  //     return{
-  //       ...prevstate,
-  //       enteredTitle:event.target.value,};
-  //     });
-  //     };
-
-  //   const clickAmountHandler = (event)=>
-  //   { setUserInput((prevstate)=>{
-  //     return {...prevstate,
-  //     enteredAmount:event.target.value,};
-  //     });
-  //     };
-
-  //     const clickDateHandler = (event)=>
-  //   { setUserInput((prevstate)=> {
-  //     return{
-  //     ...prevstate,
-  //     enteredDate:event.target.value,};
-  //     });
-  //   }
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");

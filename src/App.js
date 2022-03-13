@@ -2,8 +2,8 @@ import "./styles.css";
 import React, { useState } from "react";
 // importing all values
 // value - can be class,object,function,array.
-import Expenses from "./Expenses";
-import NewExpense from "./NewExpense";
+import Expenses from "../src/Expense/Expenses/Expenses";
+import NewExpense from "../src/Expense/NewExpense/NewExpense";
 // importing a single value
 
 const DUMMY_EXPENSE = [
@@ -37,9 +37,9 @@ const App = () => {
   };
 
   const DeletHandler = (expenseId) => {
-    // setExpenses((previousExpenses) => {
-    //   return previousExpenses.filter((expense) => expense.id !== expenseId);
-    // });
+    setExpenses((expenseList) => {
+      return expenseList.filter((expense) => expense.id !== expenseId);
+    });
     console.log(expenseId);
   };
 
